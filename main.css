@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    background-color: black;
+}
+
+.home-c {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    
+}
+
+.img {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0; 
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+.home-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.home-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.home-text .btn {
+    padding: 10px 20px;
+    background: rgb(239, 241, 241);
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.home-text .btn:hover {
+    background: rgb(3, 176, 182);
+}
+
+section {
+    padding: 60px 10%;
+}
+
+.about, .projects, .skills, .contact {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+.about{
+    background-color: #000;
+    color:white ;
+    padding: 40px;
+    
+
+
+}
+.projects{
+    color: white;
+    background-color: #000;
+    padding: 30px;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 50%;
+    padding: 10px;
+}
+
+
+.slide {
+    display: none; 
+    text-align: center;
+    padding: 20px;
+}
+
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.slideshow-controls {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slideshow-controls .prev,
+.slideshow-controls .next {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #444;
+    color: rgb(9, 9, 9);
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.slideshow-controls .prev:hover,
+.slideshow-controls .next:hover {
+    background-color: #12d9cf;
+}
+.pro{
+    padding:20px;
+}
+.title{
+    color:white;
+}
+.p{
+    color: white;
+    justify-content:center;
+    justify-items: center
+    padding 20px;
+    text-align: center;
+}
+.skills{
+    background-color: #000;
+}
+/* Skills Section */
+.skills {
+    background-color: #000;
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Technical Skills */
+.technical-skills {
+    flex: 1;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.technical-skills h3 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 20px;
+}
+
+.technical-bars .bar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.technical-bars .bar .info span {
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.technical-bars .bar .progress {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.technical-bars .bar .progress span {
+    display: block;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+.bar.html .progress span {
+    width: 90%;
+    background-color: #f16529;
+}
+
+.bar.css .progress span {
+    width: 80%;
+    background-color: #2965f1;
+}
+
+.bar.python .progress span {
+    width: 70%;
+    background-color: #3776ab;
+}
+
+.bar.java .progress span {
+    width: 60%;
+    background-color: #f89820;
+}
+
+.bar.mysql .progress span {
+    width: 50%;
+    background-color: #00758f;
+}
+
+@keyframes fillBar {
+    to {
+        transform: scaleX(1);
+    }
+}
+/* Professional Skills */
+.radial-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 2rem; 
+    margin-top: 3rem;
+}
+
+.radial-progress {
+    position: relative;
+    width: 10rem; 
+    height: 10rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.radial-progress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.radial-progress circle {
+    fill: transparent;
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.radial-progress .background {
+    stroke: #333; 
+}
+
+.radial-progress .progress {
+    stroke: #0ef; 
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: progress-animation 1.5s ease-in-out forwards; 
+}
+
+.radial-progress .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px ; 
+    font-weight: bold;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.radial-progress .skill-name {
+    margin-top: 1rem;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; 
+}
+
+
+@keyframes progress-animation {
+    from {
+        stroke-dashoffset: 283; 
+    }
+    to {
+        stroke-dashoffset: calc(283 - (283 * var(--percentage)) / 100); 
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .radial-progress {
+        width: 8rem; 
+        height: 8rem;
+    }
+
+    .radial-progress .percentage {
+        font-size: 17px;
+    }
+
+    .radial-progress .skill-name {
+        font-size: 17px;
+    }
+}
+
+/* Contact Section */
+.contact {
+    background-color: #111;
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form label {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background-color: #0ef;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #0ac;
+}
